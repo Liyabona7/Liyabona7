@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        
+        <!-- Budget Form -->
+        <div class="budget-form">
+            <input type="number" id="amount" placeholder="Enter Amount" required>
+            <input type="text" id="category" placeholder="Category (e.g., Food, Rent)" required>
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <!-- Expense Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTableBody">
+                <!-- Expenses will be added here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Summary Section -->
+        <div class="summary">
+            <h2>Total: $<span id="totalAmount">0</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
